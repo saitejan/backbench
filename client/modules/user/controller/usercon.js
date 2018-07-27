@@ -18,7 +18,7 @@ angular.module('appUserCtrl',[])
               $scope.activities = result.data.reply;
           });
 
-
+$scope.timestamp= new Date(1531785637143).toDateString();
 $scope.IsVisible = true;
 
 $scope.ShowHide = function(val){
