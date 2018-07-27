@@ -1,0 +1,152 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+div span{
+  border: 5px;
+  border-style: hidden;
+  height: 100%;
+  line-height: 1.8;
+  color: blue;
+  cursor:pointer;
+}
+
+
+
+.leftpane {
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+
+.middlepane {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.938);
+    border-collapse: collapse;
+}
+
+.rightpane {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.938);
+  border-collapse: collapse;
+  
+}
+
+
+.toppaneleft {
+  width: 25%;
+  height: 50px;
+  float: left;
+  border-collapse: collapse;
+  background-color: #4da6ff;
+  text-align: center;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+}
+
+
+.toppaneright {
+    width: 75%;
+    height: 50px;
+    float: left;
+    border-collapse: collapse;
+    background-color: #684dff;
+    margin: auto;
+    padding: 15px 0;
+    
+  }
+
+  .sec{
+      height: 30%;
+    
+    text-align:center;
+  }
+
+ .invc{
+  width: 45%;
+  height: 100%;
+  margin-left:10px;
+  float:left;
+  border: 1px solid rgb(216, 219, 219);
+  }
+
+  .memo{
+   width: 45%;
+   margin-right:10px;
+   float:right;
+   height: 100%;
+   border: 1px solid rgb(216, 219, 219);
+
+   }
+
+
+   table {
+    width: 100%;
+}
+
+  .pass{
+    margin-top: 25px;
+    float: left;
+    margin-right:0px;
+    margin-left:10px;
+    width: 97%;
+    height: 100%;
+    border: 1px solid rgb(216, 219, 219);
+    text-align:center;
+    }
+
+
+   
+  .fail{
+    margin-top: 25px;
+    width: 97%;
+    margin-right:0px;
+    margin-left:10px;
+    height: 100%;
+    border: 1px solid rgb(216, 219, 219);
+    text-align:center;
+    float: left;
+    }
+   
+
+
+    .btn-group{
+      width: 100%;
+    }
+   
+    .btn-group button {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(191, 228, 238); /* Green border */
+        color: black; /* White text */
+        padding: 10px 0px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        width:100%; /* Set a width if needed */
+        display: block; /* Make the buttons appear below each other */
+         height: 70px;
+    }
+    
+    .btn-group button:not(:last-child) {
+        border-bottom: none; /* Prevent double borders */
+    }
+    
+    /* Add a background color on hover */
+    .btn-group button:hover {
+        background-color: #3e8e41;
+    }
+
+

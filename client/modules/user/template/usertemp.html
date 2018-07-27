@@ -1,0 +1,118 @@
+
+<style>
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+			border: 1px solid #ddd;
+		}
+		
+		th, td {
+			text-align: left;
+			padding: 8px;
+		}
+		i{
+			color: blue;
+      float: left;      
+      margin-left: 5px;
+      margin-right: 5px;
+		}
+		
+		</style>
+
+
+
+
+
+  <div class="toppaneleft">
+        <a class="active" href="#home" style="color:white;text-decoration:none"><i class="glyphicon glyphicon-user" style="float: none;margin-right: 10px;color: white"></i>Backbench</a>
+
+     </div>
+ <div class="toppaneright" style="margin-bottom:10px">
+   <a href="#about" style="text-decoration:none"><i class="fa fa-home" style="font-size:28px;float: left;color:white;margin-left: 5px"></i></a><span style="margin-left: 50px;color:white">{{oneuserData.benchId}}'s Dashboard</span>
+ </div>
+ 
+    <div class="leftpane">
+      <div class="btn-group">
+			<button ng-click="mybench()"><i style="font-size:24px" class="fa">&#xf053;</i></i> My Bench  </button>   
+  <button ng-click="bench1()"><i class="fa fa-home" style="font-size:28px;float: left"></i>Dashboard  <i style="font-size:24px;float: right" class="fa">&#xf138;</i></button>
+     
+     <button ng-click="ShowHide('Modules')"><i style="font-size:24px;float: left" class="fa">&#xf15b;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modules</button>
+	
+	<button ng-click="ShowHide('Env. Variables')"><i style="font-size:24px;float: left" class="fa">&#xf16b;</i>&nbsp;&nbsp;Env. Variables</button>
+	<button ng-click="ShowHide('Endpoints')"><i style="font-size:24px" class="fa">&#xf0ac;</i>Endpoints</button>
+	<button ng-click="ShowHide('Memory')"><i class="material-icons" >&#xe322;</i>Memory</button>
+	<button ng-click="ShowHide('File Manager')"><i class="material-icons">&#xe2c7;</i>File Manager</button>
+	<button ng-click="ShowHide('Schedules')"><i style="font-size:24px" class="fa">&#xf1da;</i>&nbsp;&nbsp;Schedules</button>
+	<button ng-click="ShowHide('Graphs')"><i style="font-size:24px" class="fa">&#xf080;</i>Graphs</button>
+	<button ng-click="ShowHide('Logs')"><i style="font-size:24px" class="fa">&#xf1ea;</i>&nbsp;&nbsp;Logs</button>
+	
+	
+	
+	
+	</div>
+   </div>
+   <div ng-show="IsVisible">
+    
+    <div class="middlepane">
+            <h3 style="margin-left: 20px"> Bench Status at {{myDate | date : 'dd-MM-yyyy HH:mm'}}</h3>
+   
+
+          <div class="pass">
+            
+            <table style="width: 100%">
+              <thead><i style="font-size:24px;float: none;" class="fa">&#xf017;</i>&nbsp;Runtime logs</thead><hr>
+              <tr>
+				 
+                <th>Status</th> 
+                <th>Time</th>
+                <th>Request</th>
+				<th>Duration</th>
+				<th>Log</th>
+              </tr>
+              <tr ng-repeat="dat in dashboard_2">
+                <td>{{dat.status}}</td>
+                <td>{{dat.timestamp}}</td>
+				<td>{{dat.duration}}</td>
+				<td></td>
+                <td>{{dat.log}}</td>
+              </tr>
+               
+ 
+            </table>
+          </div>
+        
+ 
+         
+ 
+ 
+ 
+   </div>
+ 
+   <div class="rightpane">
+    <i style="font-size:24px" class="fa">&#xf1da;</i>
+     Bench Activities
+      
+    <hr>
+    <div ng-repeat="data in activities">
+     <span>{{data.authId}} </span>  <span style="color:black"> {{data.action}} </span><span>{{data.objectName}}</span><span style="color:black">  in </span><span>{{data.benchName}} </span>
+     <hr/>
+    </div>
+        
+    
+  </div> 
+ 
+ </div>
+</div>
+
+ <div ng-hide="IsVisible">
+	<div style="text-align: center;padding: 8%">
+
+
+    <label >{{val}} : 	 There is nothing to show</label> 
+
+  </div>
+	  </div>
+	   
+ 
+ 

@@ -1,0 +1,79 @@
+
+<style>
+
+.bord{
+  width: 70%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.938);
+  border-collapse: collapse;
+  margin-left: 10px;
+}
+ 
+.bord1{
+  padding:  5px;
+  border: 1px solid rgb(255, 255, 255); 
+}
+
+i{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+</style>
+
+
+
+
+  <div class="toppaneleft">
+      <a class="active" href="#home" style="color:white;text-decoration:none"><i class="glyphicon glyphicon-user" style="float: none;margin-right: 10px"></i>Backbench</a>
+
+   </div>
+<div class="toppaneright" style="margin-bottom:10px">
+ <a href="#about" style="text-decoration:none"><i class="fa fa-home" style="font-size:28px;float: left;color:white;margin-left: 5px"></i></a><span style="margin-left: 50px;color:white" ng-model="nameval">{{nameval}}</span>
+</div>
+
+  <div class="leftpane">
+    <div class="btn-group">
+   <button ng-click="home()"><i class="fa fa-home" style="font-size:28px;float: left"></i>Home  </button>
+   <button ng-click="mybench1()"><i style="font-size:32px;float: left" class="material-icons">&#xe87b;</i>My Bench <i style="font-size:24px;float: right" class="fa">&#xf138;</i></button>
+   <button ng-click="ShowHide()"><i style="font-size:24px;float: left" class="fa">&#xf15b;</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shared With Me </button>
+  </div>
+  </div>
+
+
+<div ng-show="IsVisible" class="bord">
+  
+  <div ng-repeat="bench in benchList" >
+      <button style="width:100%; background-color: white; float: left;"  ng-click="benchdata(bench)">
+          <div class="bord1">
+              <h4> <i style="font-size:24px" class="fa">&#xf023;</i>&nbsp;&nbsp;&nbsp;&nbsp;{{bench.benchId}}</h4>
+                
+                
+                  <h6>{{bench.lang}}</h6>
+                 
+          
+                </div>
+
+      </button>
+   
+
+
+  </div>       
+  
+  
+     
+
+
+
+</div>
+
+<div ng-hide="IsVisible"  style="text-align: center;padding: 5%">
+    <label> Benches shared with you will appear here</label> 
+  </div>
+   
+
+
+  
+
