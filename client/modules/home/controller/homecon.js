@@ -1,10 +1,7 @@
 angular.module('appHomeCtrl',[])
     .controller('HomeCtrl',function ($scope,$http,$state,UserService) {
         
-        
     $scope.nameval="My Bench";
-
-
 
 $scope.IsVisible = true;
 
@@ -13,19 +10,11 @@ $scope.ShowHide = function(){
     $scope.IsVisible = $scope.IsVisible=false ;
 }
 
-
-
 $scope.home=function(){
-
-
 	$state.go('app.main');
-   
 } 
 
-
 $scope.mybench1=function(){
-
-
 	$state.go('app.home');
     $scope.IsVisible = $scope.IsVisible=true ;
 } 
