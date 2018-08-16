@@ -14,25 +14,14 @@ before going to run the server, you need to install the following :
 
 node
 
-express
-
-require-dir
-
-
-install these using following commands
-
-`npm install express`
-
-`npm install require-dir`
-
 
 # Installing
 
-install node using the following command
+install modules using the following command
 
 `npm install`
 
-above command is used to install the node_modules.then start the server using the following command
+above command is used to install the node_modules which we specified in the package.json file.then start the server using the following command
 
 `node server.js`
 

@@ -20,7 +20,7 @@ $scope.mybench1=function(){
 } 
 
 $scope.benchdata=function(app){
-    console.log(app);
+   
     UserService.setUserData(app);
     $state.go('app.userData');
 }

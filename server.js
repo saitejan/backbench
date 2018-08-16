@@ -28,5 +28,7 @@ app.get('/', function (req, res) {
 })
 
 
-app.listen(8001)
+app.listen(8000, function(){
+    console.log('server is listening on port 8000');
+})
 module.exports = app;	
