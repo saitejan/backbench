@@ -21,9 +21,7 @@ require-dir
 
 install these using following commands
 
-`npm install express`
-
-`npm install require-dir`
+`npm install`
 
 
 # Installing
