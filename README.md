@@ -14,6 +14,18 @@ before going to run the server, you need to install the following :
 
 node
 
+<<<<<<< HEAD
+=======
+express
+
+require-dir
+
+
+install these using following commands
+
+`npm install`
+
+>>>>>>> 682ab1d834f788059c321b87f0c2a688e28f653d
 
 # Installing
 
